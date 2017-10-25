@@ -3,5 +3,13 @@ node_js:
   - "node"
   - "6"
   - "5"
-before_install:
-  - "npm install react"
+  - "8"
+install:
+  - yarn install
+script:
+  - yarn test
+  - yarn run build-example
+cache:
+  yarn: true
+  directories:
+    - node_modules
